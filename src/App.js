@@ -1,6 +1,6 @@
 import './App.css';
 import {
-  BrowserRouter as Router, Route, Routes, Link,
+  BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
 
 import Rockets from './components/Rockets';
@@ -22,13 +22,13 @@ function App() {
               <nav>
                 <ul className="links">
                   <li>
-                    <Link to="/">Rockets</Link>
+                    <NavLink to="/">Rockets</NavLink>
                   </li>
                   <li>
-                    <Link to="/missions">Missions</Link>
+                    <NavLink to="/missions">Missions</NavLink>
                   </li>
                   <li>
-                    <Link to="/myprofile">My Profile</Link>
+                    <NavLink to="/myprofile">My Profile</NavLink>
                   </li>
                 </ul>
               </nav>

@@ -5,3 +5,60 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
+header {
+  background-color: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid gray;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9em;
+  font-weight: bold;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+
+.header-left {
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  float: right;
+  margin-top: -3%;
+}
+
+nav ul li {
+  margin-left: 20px;
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(65, 65, 197);
+  font-family: 'Montserrat', sans-serif;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}

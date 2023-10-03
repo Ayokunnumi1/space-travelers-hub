@@ -61,3 +61,47 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.wide-td {
+  white-space: nowrap;
+}
+
+.status {
+  padding: 3px;
+  border-radius:7px;
+  background-color: rgb(117, 95, 95);
+  font-weight: bold;
+  color: #fff;
+}
+
+tr:nth-child(even) p {
+  background-color:rgb(80, 98, 158);
+}
+
+.active-btn {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid red;
+  border-radius: 4px;
+
+}

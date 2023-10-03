@@ -22,10 +22,10 @@ function App() {
               <nav>
                 <ul className="links">
                   <li>
-                    <NavLink to="/">Rockets</NavLink>
+                    <NavLink to="/rockets">Rockets</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/missions">Missions</NavLink>
+                    <NavLink to="/">Missions</NavLink>
                   </li>
                   <li>
                     <NavLink to="/myprofile">My Profile</NavLink>
@@ -37,8 +37,8 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions />} />
+          <Route path="/" element={<Missions />} />
+          <Route path="/rockets" element={<Rockets />} />
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
       </Router>

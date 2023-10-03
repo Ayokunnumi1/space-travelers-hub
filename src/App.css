@@ -68,7 +68,8 @@ table {
   margin: 20px auto;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
@@ -88,14 +89,14 @@ tr:hover {
 
 .status {
   padding: 3px;
-  border-radius:7px;
+  border-radius: 7px;
   background-color: rgb(117, 95, 95);
   font-weight: bold;
   color: #fff;
 }
 
 tr:nth-child(even) p {
-  background-color:rgb(80, 98, 158);
+  background-color: rgb(80, 98, 158);
 }
 
 .active-btn {
@@ -103,5 +104,4 @@ tr:nth-child(even) p {
   padding: 10px;
   border: 1px solid red;
   border-radius: 4px;
-
 }

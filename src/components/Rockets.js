@@ -6,7 +6,6 @@ import RocketsItem from './RocketsItem';
 const Rockets = () => {
   const selectedData = useSelector((state) => state.rockets);
   const { loading, error, rocketData } = selectedData;
-  console.log(rocketData);
 
   return (
     <ul>

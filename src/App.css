@@ -8,14 +8,12 @@
 
 header {
   background-color: #fff;
-  padding: 20px 0;
+  padding: 20px 70px;
   border-bottom: 1px solid gray;
 }
 
 .header-container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .header-title {

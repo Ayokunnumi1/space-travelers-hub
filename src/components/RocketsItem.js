@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { reserved } from '../redux/Rockets/RocketsSlice';
 
 const RocketsItem = ({ rocket }) => {
-  const { rocketData } = useSelector((state) => state.rockets);
-  console.log(rocketData);
+  // const { rocketData } = useSelector((state) => state.rockets);
+  // console.log(rocketData);
   const imgUrl = rocket.image;
   const dispatch = useDispatch();
   const reserveRocket = (buttonId) => {

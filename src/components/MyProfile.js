@@ -3,14 +3,13 @@ import { useSelector } from 'react-redux';
 
 const MyProfile = () => {
   const { rocketData } = useSelector((state) => state.rockets);
+  const filterRockets = rocketData.filter((rocket) => rocket.reserved);
   // console.log(rocketData);
   return (
     <>
       <p>Rockets</p>
       <ul>
-        {rocketData.map((rocket) => rocket.reserved && (
-          <li key={rocket.id}>{rocket.name}</li>
-        ))}
+        {filterRockets.map((rocket) => <li key={rocket.id}>{ rocket.name}</li>)}
       </ul>
 
     </>

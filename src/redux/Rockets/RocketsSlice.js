@@ -43,7 +43,6 @@ const RocketsSlice = createSlice({
           }
 
         ));
-        // console.log(state.rocketData);
       })
       .addCase(getDataFromServer.rejected, (state, action) => {
         state.loading = false;

@@ -10,9 +10,6 @@ const RocketsItem = ({ rocket }) => {
   const reserveRocket = (buttonId) => {
     dispatch(reserved(buttonId));
   };
-  // const cancelReserve = (buttonId) => {
-  //   dispatch(cancelled(buttonId));
-  // };
   return (
     <li>
       <img alt="rocket" src={imgUrl} style={{ width: '200px' }} />

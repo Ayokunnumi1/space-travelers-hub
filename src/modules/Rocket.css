@@ -1,6 +1,5 @@
 .rocket-container {
-  margin: 0 70px;
-  margin-top: 20px;
+  margin: 20px 70px;
   display: flex;
   flex-direction: column;
   gap: 20px;

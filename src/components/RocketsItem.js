@@ -16,8 +16,11 @@ const RocketsItem = ({ rocket }) => {
       <img className="rocket-content-right" alt="rocket" src={imgUrl} style={{ width: '250px' }} />
       <div className="rocket-content-left">
         <p className="rocket-name">{rocket.name}</p>
-        { rocket.reserved && <span>Reserved</span>}
-        <p>{rocket.description}</p>
+        <p className="rocket-desc">
+          { rocket.reserved && <span className="reserved">Reserved</span>}
+          {rocket.description}
+
+        </p>
         <button
           onClick={() => reserveRocket(rocket.id)}
           className={rocket.reserved ? 'cancel-reserve-btn' : 'reserve-rocket-btn'}

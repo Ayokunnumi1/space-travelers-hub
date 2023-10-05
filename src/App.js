@@ -28,13 +28,13 @@ function App() {
               <nav>
                 <ul className="links">
                   <li>
-                    <NavLink to="/">Rockets</NavLink>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>Rockets</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/missions">Missions</NavLink>
+                    <NavLink to="missions" className={({ isActive }) => (isActive ? 'active-link' : '')}>Missions</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/myprofile">My Profile</NavLink>
+                    <NavLink to="myprofile" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Profile</NavLink>
                   </li>
                 </ul>
               </nav>
@@ -44,8 +44,8 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Rockets />} />
-          <Route path="/missions" element={<Missions />} />
-          <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="missions" element={<Missions />} />
+          <Route path="myprofile" element={<MyProfile />} />
         </Routes>
       </Router>
     </div>

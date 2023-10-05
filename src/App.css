@@ -90,6 +90,8 @@ tr:hover {
 .status {
   padding: 3px;
   border-radius: 7px;
+  background-color: rgb(117, 95, 95);
+  font-weight: bold;
   color: #fff;
 }
 

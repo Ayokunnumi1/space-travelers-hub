@@ -1,52 +1,60 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { Table } from 'react-bootstrap';
-import { fetchMissions } from '../redux/missions/missionSlice';
 import Mission from './Mission';
 
-function Missions() {
-  const dispatch = useDispatch();
-  const missions = useSelector((state) => state.missions.missions);
-  const status = useSelector((state) => state.missions.status);
+const myList = [
+  {
+    mission: 'Thiacome',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Unde exercitationem necessitatibus deleniti dolores modi
+    odio quis nesciunt expedita est iusto libero, harum officia
+    architecto pariatur temporibus consectetur impedit distinctio
+    veniam.`,
+    status: 'NOT A MEMBER',
+    action: 'Join Mission',
 
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchMissions());
-    }
-  }, [status, dispatch]);
+  },
+  {
+    mission: 'Telstar',
+    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    Unde exercitationem necessitatibus deleniti dolores modi
+    odio quis nesciunt expedita est iusto libero, harum officia
+    architecto pariatur temporibus consectetur impedit distinctio
+    veniam.`,
+    status: 'ACTIVE MEMBER',
+    action: 'Leave Mission',
 
-  if (status === 'loading') {
-    return <div>Loading...</div>;
-  } if (status === 'succeeded') {
-    return (
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th className="mission-name">Mission</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {missions.map((mission) => (
-            <Mission
-              key={nanoid()}
-              id={mission.mission_id}
-              mission={mission.mission_name}
-              description={mission.description}
-              reserved={mission.reserved}
-            />
-          ))}
-        </tbody>
-      </Table>
-    );
-  } if (status === 'failed') {
-    return <div>Error loading missions.</div>;
-  }
+  },
 
-  return null;
-}
+];
+
+const Missions = () => (
+  <table>
+    <thead>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+        Action
+      </th>
+    </thead>
+    <tbody>
+      {myList.map((mission) => (
+        <Mission
+          key={nanoid}
+          mission={mission.mission}
+          description={mission.description}
+          status={mission.status}
+          action={mission.action}
+        />
+      ))}
+    </tbody>
+  </table>
+);
 
 export default Missions;

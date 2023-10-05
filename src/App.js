@@ -2,13 +2,19 @@ import './App.css';
 import {
   BrowserRouter as Router, Route, Routes, NavLink,
 } from 'react-router-dom';
-
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
 import logo from './assets/logo.png';
+import { getDataFromServer } from './redux/Rockets/RocketsSlice';
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getDataFromServer());
+  }, [dispatch]);
   return (
     <div className="App">
       <Router>

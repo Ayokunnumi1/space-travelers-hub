@@ -4,8 +4,9 @@ import RocketsItem from './RocketsItem';
 import { getDataFromServer } from '../redux/Rockets/RocketsSlice';
 
 const Rockets = () => {
-  const selectedData = useSelector((state) => state.Rockets);
+  const selectedData = useSelector((state) => state.rockets);
   const { loading, error, rocketData } = selectedData;
+  console.log(rocketData);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getDataFromServer());

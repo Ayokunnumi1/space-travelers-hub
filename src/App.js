@@ -4,11 +4,13 @@ import {
 } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+// import { ComponentFromReactBootstrap } from 'react-bootstrap';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
 import logo from './assets/logo.png';
 import { getDataFromServer } from './redux/Rockets/RocketsSlice';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();

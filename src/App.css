@@ -62,6 +62,8 @@ nav ul li a:hover {
 
 .active-link {
   text-decoration: underline
+}
+
 table {
   border-collapse: collapse;
   width: 90%;

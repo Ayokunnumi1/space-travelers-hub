@@ -56,6 +56,12 @@ nav ul li a {
   font-family: 'Montserrat', sans-serif;
 }
 
+.active-link {
+  border-left: 2px solid #47a6a5;
+  padding-left: 10px;
+}
+
+
 nav ul li a:hover {
   text-decoration: underline;
 }
@@ -105,3 +111,5 @@ tr:nth-child(even) p {
   border: 1px solid red;
   border-radius: 4px;
 }
+
+

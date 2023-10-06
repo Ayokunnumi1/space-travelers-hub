@@ -11,20 +11,20 @@ const MyProfile = () => {
   return (
     <>
       <div className="profile">
-        <div className="mission-profile">
-          <h2>Missions</h2>
-          <ul>
+        <div className="mission-card">
+          <h2 className="title-p">My Missions</h2>
+          <ul className="profile-card">
             {
             filterMissions.map(
-              (mission) => <li key={mission.mission_id}>{ mission.mission_name}</li>,
+              (mission) => <li key={mission.mission_id} className="ul-list-item">{ mission.mission_name}</li>,
             )
             }
           </ul>
         </div>
-        <div className="rocket-profile">
-          <p>Rockets</p>
-          <ul>
-            {filterRockets.map((rocket) => <li key={rocket.id}>{ rocket.name}</li>)}
+        <div className="rocket-card">
+          <h2 className="title-p">My Rockets</h2>
+          <ul className="profile-card">
+            {filterRockets.map((rocket) => <li key={rocket.id} className="ul-list-item">{ rocket.name}</li>)}
           </ul>
         </div>
       </div>

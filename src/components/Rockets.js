@@ -1,14 +1,13 @@
 import { useSelector } from 'react-redux';
-// import { useEffect } from 'react';
+import '../modules/Rocket.css';
 import RocketsItem from './RocketsItem';
-// import { getDataFromServer } from '../redux/Rockets/RocketsSlice';
 
 const Rockets = () => {
   const selectedData = useSelector((state) => state.rockets);
   const { loading, error, rocketData } = selectedData;
 
   return (
-    <ul>
+    <ul className="rocket-container">
       {loading && <p>Loading</p>}
       {error && <p>Error...</p>}
       {

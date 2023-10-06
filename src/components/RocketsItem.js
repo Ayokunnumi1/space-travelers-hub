@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { reserved } from '../redux/Rockets/RocketsSlice';
+import '../modules/RocketsItem.css';
 
 const RocketsItem = ({ rocket }) => {
   // const { rocketData } = useSelector((state) => state.rockets);
@@ -11,19 +12,23 @@ const RocketsItem = ({ rocket }) => {
     dispatch(reserved(buttonId));
   };
   return (
-    <li>
-      <img alt="rocket" src={imgUrl} style={{ width: '200px' }} />
-      <p>{rocket.name}</p>
-      { rocket.reserved && <span>Reserved</span>}
-      <p>{rocket.description}</p>
-      <button
-        onClick={() => reserveRocket(rocket.id)}
-        className={rocket.reserved ? 'cancel-reserve' : 'reserve-rocket'}
-        type="submit"
-      >
-        {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+    <li className="rocket-content">
+      <img className="rocket-content-right" alt="rocket" src={imgUrl} style={{ width: '250px' }} />
+      <div className="rocket-content-left">
+        <p className="rocket-name">{rocket.name}</p>
+        <p className="rocket-desc">
+          { rocket.reserved && <span className="reserved">Reserved</span>}
+          {rocket.description}
 
-      </button>
+        </p>
+        <button
+          onClick={() => reserveRocket(rocket.id)}
+          className={rocket.reserved ? 'cancel-reserve-btn' : 'reserve-rocket-btn'}
+          type="submit"
+        >
+          {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+        </button>
+      </div>
     </li>
 
   );

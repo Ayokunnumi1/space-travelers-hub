@@ -4,11 +4,13 @@ import {
 } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+// import { ComponentFromReactBootstrap } from 'react-bootstrap';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
 import logo from './assets/logo.png';
 import { getDataFromServer } from './redux/Rockets/RocketsSlice';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const dispatch = useDispatch();
@@ -28,13 +30,13 @@ function App() {
               <nav>
                 <ul className="links">
                   <li>
-                    <NavLink to="/rockets">Rockets</NavLink>
+                    <NavLink to="/" className={({ isActive }) => (isActive ? 'active-link' : '')}>Rockets</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/">Missions</NavLink>
+                    <NavLink to="missions" className={({ isActive }) => (isActive ? 'active-link' : '')}>Missions</NavLink>
                   </li>
                   <li>
-                    <NavLink to="/myprofile">My Profile</NavLink>
+                    <NavLink to="myprofile" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Profile</NavLink>
                   </li>
                 </ul>
               </nav>
@@ -43,9 +45,9 @@ function App() {
         </header>
 
         <Routes>
-          <Route path="/" element={<Missions />} />
-          <Route path="/rockets" element={<Rockets />} />
-          <Route path="/myprofile" element={<MyProfile />} />
+          <Route path="/" element={<Rockets />} />
+          <Route path="missions" element={<Missions />} />
+          <Route path="myprofile" element={<MyProfile />} />
         </Routes>
       </Router>
     </div>

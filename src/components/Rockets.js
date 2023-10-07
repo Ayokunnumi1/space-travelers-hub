@@ -10,11 +10,18 @@ const Rockets = () => {
     <ul className="rocket-container">
       {loading && <p>Loading</p>}
       {error && <p>Error...</p>}
-      {
-        rocketData.map((rocket) => (
-          <RocketsItem key={rocket.id} rocket={rocket} />
-        ))
-      }
+      {!loading && !error
+        && rocketData.map((rocket) => (
+          <RocketsItem
+            key={rocket?.id}
+            id={rocket?.id}
+            name={rocket?.name}
+            image={rocket?.image}
+            description={rocket?.description}
+            reserved={rocket?.reserved}
+            rocket={rocket}
+          />
+        ))}
     </ul>
   );
 };

@@ -57,9 +57,13 @@ nav ul li a {
 }
 
 .active-link {
-  border-left: 2px solid #47a6a5;
-  padding-left: 10px;
   text-decoration: underline;
+}
+
+.nav-span {
+  border-right: 3px solid #47a6a5;
+  padding-right: 10px;
+  height: 5px;
 }
 
 nav ul li a:hover {

@@ -22,7 +22,6 @@ const RocketsSlice = createSlice({
   reducers: {
     reserveRocket: (state, action) => {
       const rocket = state.rocketData.find((rocket) => rocket.id === action.payload);
-      // rocket.reserved = rocket.reserved ? false : true;
       rocket.reserved = !rocket.reserved;
     },
   },

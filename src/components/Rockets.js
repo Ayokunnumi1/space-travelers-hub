@@ -5,7 +5,6 @@ import RocketsItem from './RocketsItem';
 const Rockets = () => {
   const selectedData = useSelector((state) => state.rockets);
   const { loading, error, rocketData } = selectedData;
-
   return (
     <ul className="rocket-container">
       {loading && <p>Loading</p>}

@@ -35,6 +35,7 @@ function App() {
                   <li>
                     <NavLink to="missions" className={({ isActive }) => (isActive ? 'active-link' : '')}>Missions</NavLink>
                   </li>
+                  <span className="nav-span" />
                   <li>
                     <NavLink to="myprofile" className={({ isActive }) => (isActive ? 'active-link' : '')}>My Profile</NavLink>
                   </li>

@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 const baseUrl = 'https://api.spacexdata.com/v4/rockets';
 export const getDataFromServer = createAsyncThunk('Rockets/getDataFromServer', async () => {
   try {
-    const response = await axios.get(baseUrl);
-    return response.data;
+    const response = await fetch(baseUrl);
+    const data = await response.json();
+    return data;
   } catch (error) {
     return error.message;
   }
@@ -20,7 +20,7 @@ const RocketsSlice = createSlice({
   name: 'Rockets',
   initialState,
   reducers: {
-    reserved: (state, action) => {
+    reserveRocket: (state, action) => {
       const rocket = state.rocketData.find((rocket) => rocket.id === action.payload);
       // rocket.reserved = rocket.reserved ? false : true;
       rocket.reserved = !rocket.reserved;
@@ -39,7 +39,6 @@ const RocketsSlice = createSlice({
             image: rocket.flickr_images[0],
             name: rocket.name,
             description: rocket.description,
-            type: rocket.type,
           }
 
         ));
@@ -52,4 +51,4 @@ const RocketsSlice = createSlice({
 });
 
 export default RocketsSlice.reducer;
-export const { reserved, cancelled } = RocketsSlice.actions;
+export const { reserveRocket } = RocketsSlice.actions;

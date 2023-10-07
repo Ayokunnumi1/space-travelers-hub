@@ -19,7 +19,6 @@ const Rockets = () => {
             image={rocket?.image}
             description={rocket?.description}
             reserved={rocket?.reserved}
-            rocket={rocket}
           />
         ))}
     </ul>

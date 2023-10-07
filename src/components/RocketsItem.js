@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import '../modules/RocketsItem.css';
+import { reserveRocket } from '../redux/Rockets/RocketsSlice';
+// import { reserveRocket } from '../redux/Rockets/RocketsSlice';
 
 const RocketsItem = ({
   id, name, image, description, reserved,
 }) => {
   const dispatch = useDispatch();
-  const reserveRocket = (buttonId) => {
-    dispatch(reserved(buttonId));
+  const reserveRockets = (buttonId) => {
+    dispatch(reserveRocket(buttonId));
   };
   return (
     <li className="rocket-content">
@@ -20,7 +22,7 @@ const RocketsItem = ({
 
         </p>
         <button
-          onClick={() => reserveRocket(id)}
+          onClick={() => reserveRockets(id)}
           className={reserved ? 'cancel-reserve-btn' : 'reserve-rocket-btn'}
           type="submit"
         >

@@ -119,9 +119,9 @@ To test the project, execute the following command:
 npm run test
 ```
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]() -->
+- [Live Demo Link](https://ayokunnumi1.github.io/space-travelers-hub/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
